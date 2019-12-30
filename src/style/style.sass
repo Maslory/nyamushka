@@ -1,0 +1,566 @@
+@font-face 
+  font-family: "Trebuchet_MS"; 
+  src: url("./fonts/Trebuchet_MS.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+
+@font-face 
+  font-family: "Exo2.0-Thin"; 
+  src: url("./fonts/Exo2.0-Thin.otf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+
+$extra_small: 576px
+$medium: 768px
+$large: 992px
+$extra_large: 1200px
+
+//   // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) { ... }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) { ... }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
+
+html
+  padding: 0
+  margin: 0
+  height: 100%
+  width: 100%
+  
+
+
+body
+  padding: 0
+  margin: 0
+  height: 100%
+  width: 100%
+  
+  
+  #root
+    position: relative
+    padding: 0
+    margin: 0
+    height: 100%
+    width: 100%
+    
+    background: url(../img/background.png)
+    background-size: 100%
+    box-shadow: inset 0px 300px 300px -150px #0a0a0ad7, inset 0px -300px 300px -150px #0a0a0ad7
+    // @media screen and (max-device-width: 576px)
+    //   height: auto
+    //   background-size: cover
+    //   // .bottom_text
+    //   //   font-size: calc( 1em + 1vw )
+    // @media screen and (min-device-width: 576px)
+    //   height: auto
+    //   background-size: cover
+    //   // .bottom_text
+    //   //   font-size: calc( 1em + 1vw )
+    // @media screen and (min-device-width: 768px) 
+    //   height: auto
+    //   background-size: cover
+    //   // .bottom_text
+    //   //   font-size: calc( 0.55em + 0.55vw )
+    // @media screen and (min-device-width: 1024px) 
+    //   height: auto
+    //   min-height: 100%
+    //   background-size: cover
+    //   .bottom_text
+    //     font-size: calc( 0.40em + 0.40vw )
+    // @media screen and (min-device-width: 1440px) 
+    //   .bottom_text
+    //     font-size: calc( 0.45em + 0.45vw )
+    
+    // @media screen and (min-device-width: 1920px) 
+    //   .bottom_text
+    //     font-size: calc( 0.55em + 0.55vw )
+    // @media screen and (max-width: 576px)
+    //   height: auto
+    //   background-size: cover
+    //   .bottom_text
+    //     font-size: calc( 1em + 1vw )
+    // @media screen and (min-width: 576px)
+    //   height: auto
+    //   background-size: cover
+    //   .bottom_text
+    //     font-size: calc( 1em + 1vw )
+    // @media screen and (min-width: 768px) 
+    //   height: auto
+    //   background-size: cover
+    //   .bottom_text
+    //     font-size: calc( 0.55em + 0.55vw )
+    // @media screen and (min-width: 1024px) 
+    //   height: auto
+    //   min-height: 100%
+    //   background-size: cover
+    //   .bottom_text
+    //     font-size: calc( 0.40em + 0.40vw )
+    // @media screen and (min-width: 1440px) 
+    //   .bottom_text
+    //     font-size: calc( 0.45em + 0.45vw )
+    
+    // @media screen and (min-width: 1920px) 
+    //   .bottom_text
+    //     font-size: calc( 0.55em + 0.55vw )
+    
+    .title
+      position: relative
+      text-align: center
+      color: #ffffff
+      width: 100%
+      font-size: 2.8vw
+      font-family: 'Exo2.0-Thin'
+      margin: 0
+      padding-top: 4vh
+      padding-bottom: 4vh
+
+    // .main_content > .product_content
+    //   width: 150px
+    //   height: 700px
+      // object-fit: cover
+    // .main_content:last-child
+    //   grid-column-start: 4;
+    //   // grid-column-end: 3;
+    //   // grid-row-start: 3;
+    
+
+    .main_content
+      width: 93%
+      // padding: 0
+      // margin: 0
+      position: relative
+    
+      // display: flex
+      // justify-content: space-around
+      // align-items: center
+      margin-left: 3.5%
+      margin-right: 3.5%
+      display: grid;
+      
+      grid-auto-rows: minmax(45vw, auto);
+      justify-items: center
+      grid-column-gap: 3%
+      grid-template-columns: repeat( auto-fit, minmax(298.4px, 3fr));
+      // grid-row-gap: 3.5%
+      // grid-row-gap: 1.5vw
+      // grid-gap: 5px;
+      // grid-template-columns: repeat(auto-fit, minmax(332.1px, 1fr));
+      // grid-template-rows: repeat(3, 510px);
+      // flex-wrap: wrap
+      // flex-direction: row
+      // flex-flow: row wrap;
+      // @media screen and (min-device-width: 576px) 
+      //   width: 100%
+
+      // .item
+      //   position: relative
+
+      // @media screen and (min-device-width: 576px) 
+      //   grid-template-columns: repeat( auto-fit, minmax(450px, 3fr));
+      
+      // @media screen and (min-device-width: 768px) 
+      //   grid-template-columns: repeat( auto-fit, minmax(298.4px, 3fr));
+
+      //     margin-left: 0
+      // @media screen and (min-width: 576px) 
+      //   width: 100%
+
+      // .item
+      //   position: relative
+
+      //   @media screen and (min-width: 576px) 
+      //     margin-left: 0
+      
+      
+        
+      .item
+        position: relative
+        // display: flex
+        // justify-content: center
+        // align-items: center
+        // width: 414px
+        // height: 621px
+        // width: 25vw
+        height: 36vw
+        // padding-left: 4.15%
+        // padding-right: 4.15%
+        min-width: 300px
+        min-height: 450px
+        margin: 0
+        padding: 0
+        // margin-bottom: 15%
+        
+        .bottom_text
+          position: relative
+          color: #ffffff
+          font-family: "Trebuchet_MS"
+          text-align: center
+          margin-top: 3%
+          margin-bottom: 3%
+          font-size: calc(10px + (26 - 10) * ((100vw - 1024px) / (2560 - 1024)));
+          // font-size: 12px
+          // font-size: 26px
+          word-wrap: break-word
+          
+          // .textBottomTaste
+          //   text-align: center
+          //   white-space: normal
+          //   word-wrap: break-word
+          //   max-width: 100px
+
+          .not_available
+            color: #ffff66
+            
+
+          .buy
+            position: relative
+            color: #1698d9
+            text-decoration: none
+            cursor: pointer
+          // border-bottom: 1.4px dashed #1698d9
+          // .border-bottom
+          //   position: absolute
+          //   left: 2%
+          //   bottom: 3%
+          //   width: 24vw3zwe6
+          //   border-bottom: 1.4px dashed #1698d9
+          
+        // .buy::after
+        //   content: ''
+        //   color: #1698d9
+        //   text-decoration: none
+        //   border-bottom: 1.4px dashed #1698d9
+
+      
+      .product_content__border.disabled
+        border: 0.3em #b3b3b3 solid
+        background: #b3b3b3
+
+      .product_content__border 
+        position: relative;
+        background: #1698d9
+        // width: calc(370px + (624 - 600) * ((100vw - 500px) / (2560 - 500)));
+        height: 100%
+        
+        
+        // width: 24vw;
+        // $width: 24vw
+        // width: 25vw
+        // height: 37.5vw 
+        // min-width: 300px
+        // min-height: 450px
+        margin: 0
+        // margin-left: 7%
+        border: 0.3em #1698d9 solid
+        border-radius: 10px
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 10% 0, 0 10%) 
+        -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 15% 0, 0 10%)
+        // min-height: 353px
+        // min-width: 250px
+        display: flex
+        border-radius: 14px
+        // justify-content: center
+        // align-items: center
+        // flex-wrap: wrap
+        
+        // @media screen and (max-width: 576px) 
+        //   width: 62.9vw
+        //   height: 90.5vw
+        // @media screen and (min-width: 576px) 
+        //   width: 62.9vw
+        //   height: 90.5vw
+        //   // margin-bottom: 2%
+        // @media screen and (min-width: 768px) 
+        //   width: 34.75vw 
+        //   height: 50vw   
+        // @media screen and (min-width: 1024px) 
+        //   width: 24vw
+        //   height: 24vw + 10.5vw 
+
+        // @media screen and (max-width: 576px) 
+        //   width: 62.9vw
+        //   height: 90.5vw
+
+        // @media screen and (min-width: 576px) 
+        //   width: 62.9vw
+        //   height: 90.5vw
+        //   // margin-bottom: 2%
+        // @media screen and (min-width: 768px) 
+        //   width: 34.75vw
+        //   height: 50vw
+       
+        // @media screen and (min-width: 1024px) 
+        //   width: 24vw;
+        //   height: $width + 10.5vw
+          
+          
+          
+        // @media screen and (orientation: landscape)
+        //   width: 28vw
+        //   height: 38.5vw
+          
+        .product_content
+          clip-path: polygon(0 100%, 100% 100%, 100% 0, 15% 0, 0 9.7%)
+          -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 15% 0, 0 9.7%)
+          position: relative
+          width: 100%
+          display: flex
+          flex-wrap: wrap
+          // margin-left: 0.3%
+          height: 100%
+          border-radius: 10px
+          background: #f2f2f2
+          overflow: hidden
+          left: 0
+          top: 0     
+          // @media screen and (max-width: 576px)
+          //   .product_title
+          //     margin-top: 6%
+          //     font-size: 16px
+          //   .product_name
+          //     font-size: 6em
+          //   .product_taste
+          //     font-size: 3.3em
+          //   .product_number_of_servings
+          //     font-size: 1.9em
+          //   .product_gifts
+          //     font-size: 1.9em
+          //   .product_weight
+          //     width: 16vw
+          //     height: 16vw
+          //     min-height: 100px
+          //     min-width: 100px
+          //   .product_weight__number
+          //     font-size: 9vw
+          //   .product_weight__weight
+          //     font-size: 4.5vw
+          // @media screen and (max-device-width: 576px)
+          //   .product_title
+          //     margin-top: 6%
+          //     font-size: 14px
+          //   .product_name
+          //     font-size: 6em
+          //   .product_taste
+          //     font-size: 3.3em
+          //   .product_number_of_servings
+          //     font-size: 1.9em
+          //   .product_gifts
+          //     font-size: 1.9em
+          //   .product_weight
+          //     width: 16vw
+          //     height: 16vw
+          //     min-height: 100px
+          //     min-width: 100px
+          //   .product_weight__number
+          //     font-size: 9vw
+          //   .product_weight__weight
+          //     font-size: 4.5vw
+          // @media screen and (min-device-width: 576px)
+          //   .product_title
+          //     margin-top: 6%
+          //     font-size: calc( 1.3em + 1.3vw )
+          //   .product_name
+          //     font-size: calc( 3.8em + 3.8vw )
+          //   .product_taste
+          //     font-size: calc( 2.2em + 2.2vw )
+          //   .product_number_of_servings
+          //     font-size: 2em
+          //   .product_gifts
+          //     font-size: 2em
+          //   .product_weight
+          //     width: 16vw
+          //     height: 16vw
+          //     min-height: 100px
+          //     min-width: 100px
+          //   .product_weight__number
+          //     font-size: 9vw
+          //   .product_weight__weight
+          //     font-size: 4.5vw
+          // @media screen and (min-device-width: 768px) 
+          //   .product_title
+          //     font-size: calc( 0.83em + 0.83vw )
+          //   .product_name
+          //     font-size: calc( 2em + 2vw )
+          //   .product_taste
+          //     font-size: calc( 1.2em + 1.2vw )
+          //   .product_number_of_servings
+          //     font-size: 1.1em
+          //   .product_gifts
+          //     font-size: 1.1em
+          //   .product_weight
+          //     width: 9vw
+          //     height: 9vw
+          //     min-width: 20px
+          //     min-height: 20px
+          //   .product_weight__number
+          //     font-size: 5vw
+          //   .product_weight__weight
+          //     font-size: 2.5vw
+              
+          // @media screen and (min-device-width: 1024px) 
+          //   .product_title
+          //     font-size: calc( 0.55em + 0.55vw )
+          //   .product_name
+          //     font-size: calc( 1.6em + 1.6vw )
+          //   .product_taste
+          //     font-size: calc( 1em + 1vw )
+          //   .product_number_of_servings
+          //     font-size: 0.8em
+          //   .product_gifts
+          //     font-size: 0.8em
+          //   .product_weight
+          //     width: 6vw
+          //     height: 6vw
+          //     min-height: 50px
+          //     min-width: 50px
+          //   .product_weight__number
+          //     font-size: 3.5vw
+          //   .product_weight__weight
+          //     font-size: 1.5vw
+          // @media screen and (min-device-width: 1440px) 
+          //   .product_title
+          //     font-size: calc( 0.65em + 0.65vw )
+          //   .product_name
+          //     font-size: calc( 2em + 2vw  )
+          //   .product_taste
+          //     font-size: calc( 1.1em + 1.1vw )
+          //   .product_number_of_servings
+          //     font-size: calc( 0.63em + 0.63vw )
+          //   .product_gifts
+          //     font-size: calc( 0.63em + 0.63vw )     
+          
+          div
+            font-family: 'Trebuchet MS'
+            // margin-left: 15%
+            color: #000000
+
+          .availability.disabled div
+            background: #f2f2f2
+            color: #b3b3b3 
+          .availability.disabled img
+            opacity: 60%
+
+          .availability
+            margin-left: 15%
+            height: 30%
+
+            .product_title
+              font-size: calc(13px + (32 - 13) * ((100vw - 1024px) / (2560 - 1024)));
+              color: #666666
+              word-wrap: break-word
+              margin-top: 5%
+              
+              
+            .product_name
+              font-size: calc(40px + (95 - 40) * ((100vw - 1024px) / (2560 - 1024)));
+              font-weight: bold
+              margin-top: 2%
+              
+            .product_taste
+              font-size: calc(22px + (52 - 22) * ((100vw - 1024px) / (2560 - 1024)));
+              font-weight: bold
+              margin-top: 0
+
+            .product_number_of_servings
+              font-size: calc(12.5px + (30 - 12.5) * ((100vw - 1024px) / (2560 - 1024)))
+              color: #666666
+              margin-top: 3%
+
+            .product_gifts
+              font-size: calc(12.5px + (30 - 12.5) * ((100vw - 1024px) / (2560 - 1024)))
+              color: #666666
+             
+            img
+              position: absolute
+              top: 44%
+              left: -6.7%
+              width: 115%
+              height: 75%
+
+          .product_weight
+            position: relative;
+            // width: 7vw
+            // height: 7vw
+            // min-height: 1.5vw
+            // max-height: 20vw
+            // min-width: 1.5vw
+            // max-width: 20vw
+            padding: 0
+            margin: 0
+            margin-top: auto
+            margin-left: auto
+            padding-right: 1.5%
+            padding-bottom: 1.5% 
+            
+            
+            
+            .circle.disabled
+              background: #b3b3b3 
+            .circle
+              position: relative
+              border-radius: 50%
+              background: #1698d9
+              // width: 160px
+              // height: 160px
+              // width: 80px
+              // height: 80px
+              width: calc(60px + (160 - 60) * ((100vw - 300px) / (2560 - 300)))
+              height: calc(60px + (160 - 60) * ((100vw - 300px) / (2560 - 300)))
+              text-align: center
+              display: flex
+              justify-content: center
+              align-items: center
+
+              .text_weight
+                padding-top: 15%
+                position: relative
+                text-align: center
+                color: #ffffff
+                font-size: calc(32px + (90 - 32) * ((100vw - 500px) / (2560 - 500)));
+                margin: 0
+                line-height: 50%
+                span
+                  font-size: calc(14px + (42 - 14) * ((100vw - 500px) / (2560 - 500)));
+                
+      .product_content__border.Hover1
+        margin: 0
+      .product_content__border.Hover1:hover
+        background: #2ea8e6 
+        border-color: #2ea8e6 
+      .product_content__border.Hover1:hover .product_weight .circle
+        background:#2ea8e6 
+      .product_content__border.Selected
+        background: #d91667 
+        border-color: #d91667
+      .product_content__border.Selected .product_weight .circle
+        background: #d91667 
+        border-color: #d91667
+      .product_content__border.SelectedHover:hover .circle
+        background: #e62e7a 
+        border-color: #e62e7a 
+      .product_content__border.SelectedHover:hover
+        background: #e62e7a 
+        border-color: #e62e7a 
+      .product_content__border.Disabled
+        background: #b3b3b3
+        border-color: #b3b3b3
+      .product_content__border.Disabled .product_weight
+        background: #b3b3b3
+        border-color: #b3b3b3
+  
+
+    
+
+  // grid-row-start: 2;	
+// .best
+//   width: 300px
+//   height: 600px
+//   background: linear-gradient(135deg, transparent 15px, #58a 0) top left
+        
+        
