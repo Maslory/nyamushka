@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/style.sass';
+// import '../style/style.sass';
 import cat from '../img/cat.png'
 
 const Product = (props) => { 
@@ -84,10 +84,10 @@ const Product = (props) => {
                         {/* </div>  */}
                 </div>
             </div>
-            {/* <div  className="bottom_text">{(props.availability)
+            <div  className="bottom_text">{(props.availability)
             ? (props.select)? textSelectedBottom : textDefaultBottom
             : textDisabledBottom} 
-            </div> */}
+            </div>
             
         </div>
         
