@@ -1,11 +1,6 @@
 import React from 'react';
 import '../style/style.sass';
 import Product from './Product';
-// import '../style/media.sass';
-
-
-
-
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -33,7 +28,6 @@ class App extends React.Component {
                         weight: "2",
                         select: false,
                         availability: true
-                        
                      },
                      {    
                         title_text: "Сказочное заморское яство",
@@ -47,17 +41,8 @@ class App extends React.Component {
                         availability: false
                      }
                 ],
-            
-            
         }
-
         this.selectedProduct = this.selectedProduct.bind(this)
-        // this.selectProduct = this.selectProduct.bind(this)
-        let colorDefault='#1698d9' 
-        let colorDefaultHover='#2ea8e6'
-        let colorSelected='#d91667'
-        let colorSelectedHover='#e62e7a'
-        let colorDisabled='#b3b3b3' 
     }
 
     selectedProduct(key){
@@ -70,7 +55,6 @@ class App extends React.Component {
 
      componentDidMount(){
          for(let i=0; i< this.state.productList.length; i++){
-             console.log(this.state.productList[i].availability)
              if(this.state.productList[i].availability){
                 let asd = document.getElementsByClassName("product_content__border")[i]
                 asd.classList.toggle('Hover1')
@@ -81,27 +65,15 @@ class App extends React.Component {
                 let product_weight = document.getElementsByClassName('circle')[i]
                 product_weight.classList.toggle('disabled')
                 availability.classList.toggle('disabled')
-                product_content__border.classList.toggle('disabled')
-                
+                product_content__border.classList.toggle('disabled')    
              }
          }
-        //  let asd = document.getElementsByClassName("product_content__border")[0]
-        //  let asd1 = document.getElementsByClassName("product_content__border")[1]
-        //  let asd2 = document.getElementsByClassName("product_content__border")[2]
-        //  asd.classList.toggle('Hover1')
-        //  asd1.classList.toggle('Hover1')
-        //  asd2.classList.toggle('Hover1')
-        //  let availability = document.getElementsByClassName('availability')[0]
-        // let product_weight = document.getElementsByClassName('product_content__border ')[0]
-        // product_weight.classList.toggle('disabled')
-        //  availability.classList.toggle('disabled')
      }
    
     render() {
         let productList = this.state.productList
         return (
             <div className="App" id='app' >  
-            {console.log(productList)}
               <h3 className='title'>Ты сегодня покормил кота?</h3>
               <div    className='main_content'>
                 {productList.map((product, key) => (
