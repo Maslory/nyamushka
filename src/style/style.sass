@@ -10,29 +10,13 @@
   font-style: normal; 
   font-weight: normal; 
 
-$extra_small: 576px
-$medium: 768px
-$large: 992px
-$extra_large: 1200px
-
-//   // Small devices (landscape phones, 576px and up)
-// @media (min-width: 576px) { ... }
-
-// // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) { ... }
-
-// // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) { ... }
-
-// // Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) { ... }
-
 html
   padding: 0
   margin: 0
   height: 100%
   width: 100%
   font-size: auto
+  min-width: 500px
 
 body
   padding: 0
@@ -68,78 +52,16 @@ body
       position: relative
       margin-left: 3.5%
       margin-right: 3.5%
-      display: grid
-      display: -ms-grid
-      grid-auto-rows: minmax(50px, 1fr)
-      justify-items: center
-      grid-column-gap: 3%
-      grid-template-columns: repeat( auto-fit, minmax(298.4px, 1fr))
-      // -ms-grid-column-align: center
-      // -ms-grid-columns: ( minmax(298.4px, 1fr))[auto-fit]
-      // @media screen and ( min-device-width: 320px)
-      //   // .main_content
-      //   //   grid-template-columns: repeat( auto-fit, minmax(698.4px, 1fr))
-      //   .item:nth-child(n)
-      //     grid-column-start: 1
-      //     grid-column-end: 3
-      //     // height: 90vw
-      //     // width: 60vw
-      //     margin-bottom: 5vw
-      //   // .item:nth-child(2)
-      //   //   grid-column-start: 1
-      //   //   grid-column-end: 3
-      //   // .item:nth-child(3)
-      //   //   grid-column-start: 1
-      //   //   grid-column-end: 3
-      //   // .item:nth-child(n)
-          
-
-      // @media screen and ( min-device-width: 768px)
-      //   // .main_content
-      //   //   grid-template-columns: repeat( auto-fit, minmax(298.4px, 1fr))
-      //   .item:nth-child(1)
-      //     grid-column-start: 1
-      //     grid-column-end: 1
-      //     // grid-row-start: 1
-      //     // grid-row-end: 2
-      //   .item:nth-child(2)
-      //     grid-column-start: 2
-      //     grid-column-end: 2
-      //   .item:last-child
-      //     grid-column-start: 1
-      //     grid-column-end: 3
-      //   .item:nth-child(n)
-      //     min-width: 320px
-      //     min-height: 480px
-      // @media screen and ( min-width: 1024px)
-      //   .item:last-child
-      //     grid-column-start: 3
-      //     grid-column-end: 3
-      //   .item:nth-child(n)
-      //     min-width: 25vw
-      //     min-height: 37.5vw
-      //   .bottom_text
-      //     font-size: calc(8px + (26 - 8) * ((100vw - 1024px) / (2560 - 1024)));
-      //   .product_title
-      //     font-size: calc(12.8px + (32 - 12.8) * ((100vw - 1024px) / (2560 - 1024)));
-      //   .product_name
-      //     font-size: calc(38.4px + (96 - 38.4) * ((100vw - 1024px) / (2560 - 1024)));
-      //   .product_taste
-      //     font-size: calc(19.2px + (48 - 19.2) * ((100vw - 1024px) / (2560 - 1024)));
-      //   .product_number_of_servings
-      //     font-size: calc(11.19px + (27.9808 - 11.19) * ((100vw - 1024px) / (2560 - 1024)))
-      //   .product_gifts
-      //     font-size: calc(11.19px + (27.9808 - 11.19) * ((100vw - 1024px) / (2560 - 1024)))
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
 
       .item
         position: relative
-        // width: 100%
         margin: 0
         padding: 0
-        // width: 25vw
-        // height: 37.5vw
-        
-        
+       
+
         .bottom_text
           position: relative
           color: #ffffff
@@ -153,51 +75,37 @@ body
           .not_available
             color: #ffff66
             
-
           .buy
             position: relative
             color: #1698d9
             text-decoration: none
             cursor: pointer
-        
-      .product_content__border.disabled
-        border: 0.3em #b3b3b3 solid
-        background: #b3b3b3
 
       .product_content__border 
         position: relative;
         background: #1698d9
-        height: 100%
-        width: 100%        
+        // height: 100%
+        // width: 100%        
         margin: 0
-       
-        border-color: #1698d9
-        border-width: 0.3em
-        border-style: solid
-        border-radius: 10px
-        clip-path: polygon(0 100%, 100% 100%, 100% 0, 10% 0, 0 10%) 
-        -o-clip-path: polygon(0 100%, 100% 100%, 100% 0, 10% 0, 0 10%) 
-        -ms-clip-path: polygon(0 100%, 100% 100%, 100% 0, 10% 0, 0 10%) 
-        -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 15% 0, 0 10%)
         display: flex
-        border-radius: 14px
+        justify-content: center
+        align-items: center
+        border-radius: 12px
+        color: #fff;
+        background: #337AB7;
+        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 7%, #1698d9 0);
 
         .product_content
-          clip-path: polygon(0 100%, 100% 100%, 100% 0, 15% 0, 0 9.7%)
-          -o-clip-path: polygon(0 100%, 100% 100%, 100% 0, 15% 0, 0 9.7%)
-          -ms-clip-path: polygon(0 100%, 100% 100%, 100% 0, 15% 0, 0 9.7%)
-          -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 15% 0, 0 9.7%)
+          background: #f2f2f2;
+          background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 7%, #f2f2f2 0);
           position: relative
-          width: 100%
+          width: 97%
           display: flex
           flex-wrap: wrap
-          height: 100%
+          height: 98%
           border-radius: 10px
-          background: #f2f2f2
           overflow: hidden
-          left: 0
-          top: 0     
-          
+
           div
             font-family: 'Trebuchet MS'
             color: #000000
@@ -209,42 +117,31 @@ body
             opacity: 60%
 
           .availability
-            margin-left: 15%
+            margin-left: 17.5%
             height: 30%
             
 
             .product_title
               overflow: hidden
               white-space: nowrap
-              // font-size: calc(12px + (32 - 12) * ((100vw - 1024px) / (2560 - 1024)));
               color: #666666
               word-wrap: break-word
               margin-top: 7.75%
-              font-size: 1.1em
 
             .product_name
-              // font-size: calc(35px + (96 - 35) * ((100vw - 1024px) / (2560 - 1024)));
               font-weight: bold
               margin-top: 2%
-              font-size: 3.2em
               
             .product_taste
-              // font-size: calc(22px + (48 - 22) * ((100vw - 1024px) / (2560 - 1024)));
               font-weight: bold
               margin-top: 0
-              font-size: 1.8em
 
             .product_number_of_servings
-              // font-size: calc(12.5px + (27.9808 - 12.5) * ((100vw - 1024px) / (2560 - 1024)))
               color: #666666
               margin-top: 6%
-              font-size: 1.03em
 
             .product_gifts
-              // font-size: calc(12.5px + (27.9808 - 12.5) * ((100vw - 1024px) / (2560 - 1024)))
               color: #666666
-              font-size: 1.03em
-             
             img
               position: absolute
               top: 44%
@@ -253,48 +150,46 @@ body
               height: 75%
 
           .product_weight
-            position: relative;
+            position: absolute;
             padding: 0
             margin: 0
-            margin-top: auto
-            margin-left: auto
+            bottom: 0
+            right: 0
             padding-right: 1.5%
             padding-bottom: 1.5% 
-            
-            .circle.disabled
-              background: #b3b3b3 
 
             .circle
               position: relative
+              margin: 0
               border-radius: 50%
               background: #1698d9
               text-align: center
-              display: flex
-              justify-content: center
-              align-items: center
-
+              text-align: -moz-center
+              text-align: -webkit-center
+              
               .text_weight
-                padding-top: 15%
-                position: relative
+                padding-top: 20%
+                width: 100%
                 text-align: center
+                text-align: -moz-center
+                text-align: -webkit-center
                 color: #ffffff
-                font-size: calc(32px + (90 - 32) * ((100vw - 500px) / (2560 - 500)));
-                margin: 0
-                line-height: 50%
+                line-height: 70%
 
-                span
-                  font-size: calc(14px + (42 - 14) * ((100vw - 500px) / (2560 - 500)));
+              span
+                color: #ffffff
+                
                 
       .product_content__border.Hover1
         margin: 0
       .product_content__border.Hover1:hover
         background: #2ea8e6 
-        border-color: #2ea8e6 
+        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 7%, #2ea8e6 0);
       .product_content__border.Hover1:hover .product_weight .circle
         background:#2ea8e6 
       .product_content__border.Selected
         background: #d91667 
-        border-color: #d91667
+        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 7%, #d91667 0);
       .product_content__border.Selected .product_weight .circle
         background: #d91667 
         border-color: #d91667
@@ -303,19 +198,20 @@ body
         border-color: #e62e7a 
       .product_content__border.SelectedHover:hover
         background: #e62e7a 
+        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 7%, #e62e7a  0);
         border-color: #e62e7a 
-      .product_content__border.Disabled
+      .product_content__border.disabled
+        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 7%, #b3b3b3  0);
+      .product_content__border.disabled .product_weight .circle
         background: #b3b3b3
-        border-color: #b3b3b3
-      .product_content__border.Disabled .product_weight
-        background: #b3b3b3
-        border-color: #b3b3b3
-  
-@media screen and ( min-device-width: 320px)
+        border-color: #9c9c9c
+
+@media screen and ( min-width: 320px) 
   html
-    font-size: 190%  
+    font-size: 70%  
   body
     #root
+      min-width: 320px
       #app
         .product_content__border 
           border-width: 0.3em 
@@ -324,68 +220,31 @@ body
             width: 17.5vw
             height: 17.5vw
             .text_weight
-              font-size: 90px
+              font-size: 9.5vw
             span
-              font-size: 45px 
-  body
-    #root 
-      .main_content
-        grid-auto-rows: minmax(105vw, auto)
-  .item
-    grid-column-start: 1
-    grid-column-end: 3
-    height: 90vw
-    width: 60vw
-    margin-bottom: 5vw
-
-
-@media screen and ( min-device-width: 768px)
-  html
-    font-size: 100%
-  body
-    #root 
-      #app
-        .main_content
-          .circle
-            width: 9vw
-            height: 9vw
-            .text_weight
               font-size: 5vw
-            span
-              font-size: 2.5vw
-  body
-    #root 
-      .main_content
-        grid-auto-rows: minmax(550px, auto)
-  .item:nth-child(1)
-    grid-column-start: 1
-    grid-column-end: 1
-  .item:nth-child(2)
-    grid-column-start: 2
-    grid-column-end: 2
-  .item:last-child
-    grid-column-start: 1
-    grid-column-end: 3
-  .item
-    width: 320px
-    height: 480px
-
-@media only screen and (min-device-width: 1024px)
-  .item:last-child
-    grid-column-start: 3
-    grid-column-end: 3
-    -ms-grid-column: 3
-    -ms-grid-row: 1
-  .item:first-child
-    -ms-grid-column: 1
-    -ms-grid-row: 1
-  .item:nth-child(2)
-    -ms-grid-column: 2
-    -ms-grid-row: 1
+  .product_content__border 
+    height: 95vw
+    width: 60vw
+  #root
+    #app
+      .product_title
+        font-size: 3vw
+      .product_name
+        font-size: 9vw
+      .product_taste
+        font-size: 5.25vw
+      .product_number_of_servings
+        font-size: 3vw
+      .product_gifts
+        font-size: 3vw
+      .bottom_text
+        font-size: 2.2vw
+@media screen and (min-width: 320px) and (orientation: landscape)
   .main_content
-    .item:nth-child(n)
-      width: 25vw
-      height: 37.5vw
+    .product_content__border
+      width: 24vw
+      height: 36vw
   body
     #root
       #app
@@ -412,6 +271,9 @@ body
           .circle
             width: 7vw
             height: 7vw
+            min-width: 20px
+            min-height: 20px
+            
             .text_weight
               font-size: 4vw
             span
@@ -419,5 +281,126 @@ body
   html
     body
       #root
+        .title
+          font-size: 3vw
+
+@media screen and ( min-width: 768px)
+  html
+    font-size: 100%
+  body
+    #root 
+      #app
+        .main_content
+          .circle
+            width: 9vw
+            height: 9vw
+            .text_weight
+              font-size: 5vw
+            span
+              font-size: 2.5vw
+  .product_content__border 
+    width: 34vw
+    height: 51vw
+  #root
+    #app
+      .product_title
+        font-size: 1.75vw
+      .product_name
+        font-size: 5.15vw
+      .product_taste
+        font-size: 2.9vw
+      .product_number_of_servings
+        font-size: 1.65vw
+      .product_gifts
+        font-size: 1.65vw
+      .bottom_text
+        font-size: 1.4vw
+
+@media screen and (min-width: 768px) and (orientation: landscape)
+  .main_content
+    .product_content__border
+      width: 24vw
+      height: 36vw
+  body
+    #root
+      #app
+        .product_content__border 
+          border-width: 0.4vw 
+  #root
+    #app
+      .product_title
+        font-size: 1.3vw
+      .product_name
+        font-size: 3.8vw
+      .product_taste
+        font-size: 2.1vw
+      .product_number_of_servings
+        font-size: 1.2vw
+      .product_gifts
+        font-size: 1.2vw
+      .bottom_text
+        font-size: 1vw
+  body
+    #root 
+      #app
+        .main_content
+          .circle
+            width: 7vw
+            height: 7vw
+            min-width: 20px
+            min-height: 20px
+            
+            .text_weight
+              font-size: 4vw
+            span
+              font-size: 2vw
+  html
+    body
+      #root
+        .title
+          font-size: 3vw
+
+@media screen and (min-width: 1200px) and (orientation: landscape)
+  .main_content
+    .product_content__border
+      width: 24vw
+      height: 36vw
+  body
+    #root
+      #app
+        .product_content__border 
+          border-width: 0.4vw 
+  #root
+    #app
+      .product_title
+        font-size: 1.3vw
+      .product_name
+        font-size: 3.8vw
+      .product_taste
+        font-size: 2.1vw
+      .product_number_of_servings
+        font-size: 1.2vw
+      .product_gifts
+        font-size: 1.2vw
+      .bottom_text
+        font-size: 1vw
+  body
+    #root 
+      #app
+        .main_content
+          .circle
+            width: 7vw
+            height: 7vw
+            min-width: 20px
+            min-height: 20px
+            
+            .text_weight
+              font-size: 4vw
+            span
+              font-size: 2vw
+  html
+    body
+      #root
+        min-width: 1200px
         .title
           font-size: 3vw
