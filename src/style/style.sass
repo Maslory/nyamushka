@@ -1,12 +1,14 @@
 @font-face 
   font-family: "Trebuchet_MS"; 
-  src: url("./fonts/Trebuchet_MS.ttf") format("truetype"); 
+  src: url("./fonts/Trebuchet_MS.otf") format("truetype"); 
+  src: url("./fonts/Trebuchet_MS.woff") format("truetype"); 
   font-style: normal; 
   font-weight: normal; 
 
 @font-face 
   font-family: "Exo2.0-Thin"; 
   src: url("./fonts/Exo2.0-Thin.otf") format("truetype"); 
+  src: url("./fonts/Exo2.0-Thin.woff") format("truetype"); 
   font-style: normal; 
   font-weight: normal; 
 
@@ -14,28 +16,39 @@ html
   padding: 0
   margin: 0
   height: 100%
-  width: 100%
   font-size: auto
   min-width: 500px
+  
 
 body
   padding: 0
   margin: 0
   height: 100%
-  width: 100%
+  min-width: 500px
+  box-sizing: border-box
+
   
 
-  #root
+  .product_page
     position: relative
     padding: 0
     margin: 0
     height: auto
     min-height: 100%
-    width: 100%
+    box-sizing: border-box
     background: url(../img/background.png)
     background-size: 100%
     box-shadow: inset 0px 300px 300px -150px #0a0a0ad7, inset 0px -300px 300px -150px #0a0a0ad7
     
+    .container
+      display: flex
+      margin: 0
+      padding: 0
+      justify-content: center
+      box-sizing: border-box
+      // width: 100%
+      // min-width: 500px
+  
     .title
       position: relative
       text-align: center
@@ -53,6 +66,7 @@ body
       margin-left: 3.5%
       margin-right: 3.5%
       display: flex
+      max-width: 1200px
       justify-content: space-around
       flex-wrap: wrap
 
@@ -80,29 +94,39 @@ body
             color: #1698d9
             text-decoration: none
             cursor: pointer
+            
+          .border-bottom
+            border-bottom: dashed #1698d9 0.5px
+            width: 26px
+            height: 1px
+            position: absolute
+            left: 1px
+            bottom: 0
+
 
       .product_content__border 
         position: relative;
-        background: #1698d9
-        // height: 100%
-        // width: 100%        
+        background: #1698d9      
         margin: 0
         display: flex
         justify-content: center
         align-items: center
+        width: 320px
+        height: 480px
         border-radius: 12px
         color: #fff;
         background: #337AB7;
-        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 7%, #1698d9 0);
+        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 30px, #1698d9 0);
 
         .product_content
           background: #f2f2f2;
-          background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 7%, #f2f2f2 0);
+          background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 28px, #f2f2f2 0);
           position: relative
-          width: 97%
+          width: 312px
+          height: 472px
           display: flex
           flex-wrap: wrap
-          height: 98%
+          
           border-radius: 10px
           overflow: hidden
 
@@ -117,7 +141,7 @@ body
             opacity: 60%
 
           .availability
-            margin-left: 17.5%
+            margin-left: 13%
             height: 30%
             
 
@@ -127,27 +151,31 @@ body
               color: #666666
               word-wrap: break-word
               margin-top: 7.75%
+              font-size: 16px
 
             .product_name
               font-weight: bold
               margin-top: 2%
+              font-size: 48px
               
             .product_taste
               font-weight: bold
               margin-top: 0
+              font-size: 24px
 
             .product_number_of_servings
               color: #666666
               margin-top: 6%
+              font-size: 14px
 
             .product_gifts
               color: #666666
-            img
+              font-size: 14px
+
+            .cat
               position: absolute
               top: 44%
-              left: -6.7%
-              width: 115%
-              height: 75%
+              left: -8%
 
           .product_weight
             position: absolute;
@@ -155,8 +183,8 @@ body
             margin: 0
             bottom: 0
             right: 0
-            padding-right: 1.5%
-            padding-bottom: 1.5% 
+            padding-right: 2.5%
+            padding-bottom: 3.5% 
 
             .circle
               position: relative
@@ -166,6 +194,8 @@ body
               text-align: center
               text-align: -moz-center
               text-align: -webkit-center
+              width: 82px
+              height: 82px
               
               .text_weight
                 padding-top: 20%
@@ -174,22 +204,24 @@ body
                 text-align: -moz-center
                 text-align: -webkit-center
                 color: #ffffff
-                line-height: 70%
+                line-height: 75%
+                font-size: 44px
 
               span
                 color: #ffffff
+                font-size: 22px
                 
                 
       .product_content__border.Hover1
         margin: 0
       .product_content__border.Hover1:hover
         background: #2ea8e6 
-        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 7%, #2ea8e6 0);
+        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 30px, #2ea8e6 0);
       .product_content__border.Hover1:hover .product_weight .circle
         background:#2ea8e6 
       .product_content__border.Selected
         background: #d91667 
-        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 7%, #d91667 0);
+        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 30px, #d91667 0);
       .product_content__border.Selected .product_weight .circle
         background: #d91667 
         border-color: #d91667
@@ -198,209 +230,115 @@ body
         border-color: #e62e7a 
       .product_content__border.SelectedHover:hover
         background: #e62e7a 
-        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 7%, #e62e7a  0);
+        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 30px, #e62e7a  0);
         border-color: #e62e7a 
       .product_content__border.disabled
-        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 7%, #b3b3b3  0);
+        background: linear-gradient(to left bottom, transparent 100%, rgba(0,0,0,.4) 0) no-repeat 100% 0 / 30px 30px, linear-gradient(135deg, transparent 30px, #b3b3b3  0);
       .product_content__border.disabled .product_weight .circle
         background: #b3b3b3
         border-color: #9c9c9c
 
-@media screen and ( min-width: 320px) 
-  html
-    font-size: 70%  
-  body
-    #root
-      min-width: 320px
-      #app
-        .product_content__border 
-          border-width: 0.3em 
-        .main_content
-          .circle
-            width: 17.5vw
-            height: 17.5vw
-            .text_weight
-              font-size: 9.5vw
-            span
-              font-size: 5vw
-  .product_content__border 
-    height: 95vw
-    width: 60vw
-  #root
-    #app
-      .product_title
-        font-size: 3vw
-      .product_name
-        font-size: 9vw
-      .product_taste
-        font-size: 5.25vw
-      .product_number_of_servings
-        font-size: 3vw
-      .product_gifts
-        font-size: 3vw
-      .bottom_text
-        font-size: 2.2vw
-@media screen and (min-width: 320px) and (orientation: landscape)
-  .main_content
-    .product_content__border
-      width: 24vw
-      height: 36vw
-  body
-    #root
-      #app
-        .product_content__border 
-          border-width: 0.4vw 
-  #root
-    #app
-      .product_title
-        font-size: 1.3vw
-      .product_name
-        font-size: 3.8vw
-      .product_taste
-        font-size: 2.1vw
-      .product_number_of_servings
-        font-size: 1.2vw
-      .product_gifts
-        font-size: 1.2vw
-      .bottom_text
-        font-size: 1vw
-  body
-    #root 
-      #app
-        .main_content
-          .circle
-            width: 7vw
-            height: 7vw
-            min-width: 20px
-            min-height: 20px
-            
-            .text_weight
-              font-size: 4vw
-            span
-              font-size: 2vw
+
+@media screen and ( min-width: 320px)
   html
     body
-      #root
-        .title
-          font-size: 3vw
+      .product_page
+        #app
+          .container
+            position: relative
+            margin: 0
+            padding: 0
+            width: 100%
+            transform: scale(1) translate(0%, 0%)  
+            .main_content
+              margin: 0
+              padding: 0
+              width: 83.4%
+
+
+@media screen and ( min-width: 320px) and (orientation: landscape)
+  html
+    body
+      .product_page
+        width: 100%
+        #app
+          margin: 0
+          position: relative
+          padding: 0
+          width: 100%
+          overflow: hidden
+
+          .container
+            position: relative
+            margin: 0
+            padding: 0
+            width: 175%
+            transform: scale(0.7) translate(-31%, -5%)  
+
+            .main_content
+              width: 80%
 
 @media screen and ( min-width: 768px)
   html
-    font-size: 100%
-  body
-    #root 
-      #app
-        .main_content
-          .circle
-            width: 9vw
-            height: 9vw
-            .text_weight
-              font-size: 5vw
-            span
-              font-size: 2.5vw
-  .product_content__border 
-    width: 34vw
-    height: 51vw
-  #root
-    #app
-      .product_title
-        font-size: 1.75vw
-      .product_name
-        font-size: 5.15vw
-      .product_taste
-        font-size: 2.9vw
-      .product_number_of_servings
-        font-size: 1.65vw
-      .product_gifts
-        font-size: 1.65vw
-      .bottom_text
-        font-size: 1.4vw
+    body
+      .product_page
+        #app
+          .container
+            position: relative
+            margin: 0
+            padding: 0
+            transform: scale(1) translate(0%, 0%)  
+            width: 100%
 
-@media screen and (min-width: 768px) and (orientation: landscape)
-  .main_content
-    .product_content__border
-      width: 24vw
-      height: 36vw
-  body
-    #root
-      #app
-        .product_content__border 
-          border-width: 0.4vw 
-  #root
-    #app
-      .product_title
-        font-size: 1.3vw
-      .product_name
-        font-size: 3.8vw
-      .product_taste
-        font-size: 2.1vw
-      .product_number_of_servings
-        font-size: 1.2vw
-      .product_gifts
-        font-size: 1.2vw
-      .bottom_text
-        font-size: 1vw
-  body
-    #root 
-      #app
-        .main_content
-          .circle
-            width: 7vw
-            height: 7vw
-            min-width: 20px
-            min-height: 20px
-            
-            .text_weight
-              font-size: 4vw
-            span
-              font-size: 2vw
+            .main_content
+              width: 90%
+
+@media screen and ( min-width: 768px) and (orientation: landscape)
   html
     body
-      #root
-        .title
-          font-size: 3vw
+      .product_page
+        width: 100%
+        #app
+          margin: 0
+          position: relative
+          padding: 0
+          max-width: 100%
+          overflow: hidden
 
-@media screen and (min-width: 1200px) and (orientation: landscape)
-  .main_content
-    .product_content__border
-      width: 24vw
-      height: 36vw
-  body
-    #root
-      #app
-        .product_content__border 
-          border-width: 0.4vw 
-  #root
-    #app
-      .product_title
-        font-size: 1.3vw
-      .product_name
-        font-size: 3.8vw
-      .product_taste
-        font-size: 2.1vw
-      .product_number_of_servings
-        font-size: 1.2vw
-      .product_gifts
-        font-size: 1.2vw
-      .bottom_text
-        font-size: 1vw
-  body
-    #root 
-      #app
-        .main_content
-          .circle
-            width: 7vw
-            height: 7vw
-            min-width: 20px
-            min-height: 20px
-            
-            .text_weight
-              font-size: 4vw
-            span
-              font-size: 2vw
+          .container
+            position: relative
+            margin: 0
+            padding: 0
+            transform: scale(1)
+            width: 100%
+
+            .main_content
+              width: 90%
+        
+
+@media screen and ( min-width: 992px)
   html
     body
-      #root
-        min-width: 1200px
-        .title
-          font-size: 3vw
+      .product_page
+        #app
+          .container
+            .main_content
+              width: 90%
+
+@media screen and ( min-width: 992px) and (orientation: landscape)
+  html
+    body
+      .product_page
+          #app
+            .container
+              .main_content
+                width: 80%
+          
+@media screen and ( min-width: 1200px)
+  html
+    body
+      .product_page
+        #app
+          .container
+            .main_content
+              width: 93%

@@ -75,17 +75,20 @@ class App extends React.Component {
         return (
             <div className="App" id='app' >  
               <h3 className='title'>Ты сегодня покормил кота?</h3>
-              <div    className='main_content'>
-                {productList.map((product, key) => (
-                <Product
-                    taste={product.taste} number_of_servings={product.number_of_servings} 
-                    gifts={product.gifts} weight={product.weight} 
-                    bottom_text_selected={product.bottom_text_selected}
-                    key={key} number={key} select={product.select}
-                    selectedProduct={this.selectedProduct}
-                    availability = {product.availability}
-                />))}
+              <div className="container">
+                <div    className='main_content'>
+                    {productList.map((product, key) => (
+                    <Product
+                        taste={product.taste} number_of_servings={product.number_of_servings} 
+                        gifts={product.gifts} weight={product.weight} 
+                        bottom_text_selected={product.bottom_text_selected}
+                        key={key} number={key} select={product.select}
+                        selectedProduct={this.selectedProduct}
+                        availability = {product.availability}
+                    />))}
+                </div>
               </div>
+             
             </div>
         );
     }

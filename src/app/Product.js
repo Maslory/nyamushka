@@ -57,7 +57,7 @@ const Product = (props) => {
                             <div className='product_taste'>{props.taste}</div>
                             <div className='product_number_of_servings'><strong>{props.number_of_servings}</strong> порций</div>
                             <div  className='product_gifts'>{props.gifts}</div>
-                            <img src={cat} alt="cat"/>
+                            <img className='cat' src={cat} alt="cat"/>
                         </div>
                             <div className='product_weight'>
                                 <div className='circle'> 
